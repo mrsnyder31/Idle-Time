@@ -38,11 +38,19 @@
 
 .resource-total {
     border: 1px dotted blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     
     width: 50%;
 }
 .resource-current {
     border: 1px dotted blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
    
     width: 50%;
 }
@@ -53,6 +61,10 @@
 } */
 .skill-icon {
     border: 1px dotted blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     
     width: 49%;
 }
@@ -60,6 +72,14 @@
 .game-window {
     border: 1px solid black;
     min-height: 45vh;
+    background-color: rgba(130, 115, 223, 0.699);
+
+    
+/* flexbox code should be temporary */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -79,9 +99,17 @@
 }
 .current {
     width: 49%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .upgrade-current {
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 40px;
 }
 .wrap-skill {
@@ -91,12 +119,18 @@
 }
 .upgrade-skill {
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 60px;
     width: 49.6%;
+   
 }
 
 .wrap-screen-bottom-stat {
     border: 1px solid black;
+    
 
 }
 
@@ -109,5 +143,9 @@
 }
 .popup {
     width: 32%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
