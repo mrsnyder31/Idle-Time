@@ -10,16 +10,16 @@ export const loadPage = () => {
 
                 <div class="wrap-screen-top-resource"> 
 
-                <div class="resource-current">Number Counter</div>
-                    <div class="resource-total">Current Score? => move right corner</div>
+                    <div class="resource-total">$$</div>
+                    <div class="resource-current">$$</div>
                     
                 </div>
 
                 <div class="wrap-screen-top-skill">
 
                     <!-- <div class="skill-header">Skills</div> -->
-                    <div class="skill-icon">Skill 1 ?remove?</div>
-                    <div class="skill-icon">Skill2 ?remove? </div>
+                    <div class="skill-icon">Skill 1</div>
+                    <div class="skill-icon">Skill2 </div>
                     
                 </div>
 
