@@ -1,0 +1,113 @@
+
+.wrap-screen {
+    background-color: rgb(81, 138, 88);
+    border: 1px solid black;
+    color: white;
+    max-width: 650px;
+    margin: auto;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+
+.wrap-screen-top {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    min-height: 10vh;
+    
+}
+
+.wrap-screen-top-resource {
+
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.wrap-screen-top-skill {
+
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.resource-total {
+    border: 1px dotted blue;
+    
+    width: 50%;
+}
+.resource-current {
+    border: 1px dotted blue;
+   
+    width: 50%;
+}
+/* .skill-header {
+    border: 1px dotted blue;
+    
+    width: 100%;
+} */
+.skill-icon {
+    border: 1px dotted blue;
+    
+    width: 49%;
+}
+
+.game-window {
+    border: 1px solid black;
+    min-height: 45vh;
+
+}
+
+.wrap-screen-bottom {
+    border: 1px solid black;
+    min-height: 35vh;
+   
+
+}
+
+.wrap-screen-bottom-current {
+    border: 1px solid black;
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+
+}
+.current {
+    width: 49%;
+}
+.upgrade-current {
+    border: 1px solid black;
+    height: 40px;
+}
+.wrap-skill {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.upgrade-skill {
+    border: 1px solid black;
+    height: 60px;
+    width: 49.6%;
+}
+
+.wrap-screen-bottom-stat {
+    border: 1px solid black;
+
+}
+
+.wrap-screen-bottom-popup {
+    border: 1px solid black;
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+
+}
+.popup {
+    width: 32%;
+}
+
