@@ -1,4 +1,5 @@
 import { loadPage } from "./loadPage.js";
+import { levelUpCost } from "./resourceCounter.js";
 import { upgradeRender } from "./upgradeWindows.js";
 
 
@@ -17,14 +18,19 @@ upgradeRenderHTML.innerHTML = upgradeRender();
 
 mainContainer.addEventListener("click", click => {
     if (click.target.id.startsWith("popup-")) {
-        const [,requestId] = click.target.id.split("-")
-           console.log("You have clicked", requestId)
-           upgradeRenderHTML.innerHTML = upgradeRender(requestId);
+        const [,popupId] = click.target.id.split("-")
+           console.log("You have clicked", popupId)
+           upgradeRenderHTML.innerHTML = upgradeRender(popupId);
     }
 })
 
-
-
+mainContainer.addEventListener("click", click => {
+    if (click.target.id.startsWith("upgrade")) {
+        const [,upgradeId] = click.target.id.split("--")
+           console.log("You have clicked", upgradeId)
+           levelUpCost(upgradeId)
+    }
+})
 
 
 

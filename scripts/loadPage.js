@@ -1,3 +1,4 @@
+import { resourceCounterHTML } from "./resourceCounter.js"
 
 
 
@@ -10,16 +11,18 @@ export const loadPage = () => {
 
                 <div class="wrap-screen-top-resource"> 
 
-                    <div class="resource-total">$$</div>
-                    <div class="resource-current">$$</div>
+                    <div class="resource-total">Resource Counter
+                    ${resourceCounterHTML()}
+                    </div>
+                    <div class="resource-current">?total score? => move to right corner?</div>
                     
                 </div>
 
                 <div class="wrap-screen-top-skill">
 
                     <!-- <div class="skill-header">Skills</div> -->
-                    <div class="skill-icon">Skill 1</div>
-                    <div class="skill-icon">Skill2 </div>
+                    <div class="skill-icon">Skill ?remove?</div>
+                    <div class="skill-icon">Skill ?remove? </div>
                     
                 </div>
 
