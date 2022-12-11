@@ -2,6 +2,7 @@ import { resourceCounterHTML } from "./resourceCounter.js"
 
 
 
+
 export const loadPage = () => {
 
     let html = `
@@ -29,7 +30,7 @@ export const loadPage = () => {
             </div>
                    
             <div class="game-window">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png" alt="stickman" width="100px">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png" alt="stickman" width="50px">
                 
             </div>
             <!-- <div class="playback-speed">- Speed +</div> -->
@@ -38,14 +39,14 @@ export const loadPage = () => {
                 
                 <div class="wrap-screen-bottom-current">
 
-                    <div class="current-stat-total current">Total Stats</div>
-                    <div class="current-level current">Current Level</div>
+                    <div class="current-stat-total current">Power Level: Error </div>
+                    <div class="current-level current">Current Level Power: Error</div>
                     
                 </div>
 
                     <div class="wrap-screen-bottom-stat" id="container-all-upgrade">
 
-                        <div class="upgrade-current" id="header-upgrade">Current Upgrade</div>
+                        <div class="upgrade-current" id="header-upgrade">Current Upgrade Error</div>
                     
                         <div class="wrap-skill" id="container-upgrade">
 

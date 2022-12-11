@@ -1,12 +1,18 @@
-import { getAttack, getDefense, getUtility, setAttack } from "./database.js";
-import { upgradeRender } from "./upgradeWindows.js";
+import { getAttack, getDefense, getUtility } from "./database.js";
+import { setPowerLevel } from "./powerLevel.js";
+import { attackRender, defenseRender, utilityRender } from "./upgradeWindows.js";
 
 
+export const resourceCounterHTML = () => {
+
+    let html = `<div id="counter"> $0 </div>`
+    return html
+}
 
 
    var count=0;
 
-   var counter = setInterval(timer, 80);
+   var counter = setInterval(timer, 8);
    
    function timer()
    {
@@ -25,43 +31,51 @@ import { upgradeRender } from "./upgradeWindows.js";
         countDisplay.innerHTML= `$ ${count}` ;   
     }
     
-    
-    export const resourceCounterHTML = () => {
-    
-        let html = `<div id="counter"> $0 </div>`
-        return html
-    }
-    const tempAttack = getAttack();
-    const tempDefense = getDefense();
-    const tempUtility = getUtility();    
+
+
+ 
+    export let tempAttack = getAttack();
+    export let tempDefense = getDefense();
+    export let tempUtility = getUtility();    
     
 
 
-
-export const levelUpCost = () => {
+export const levelUpCost = (id) => {
     for (const atk of tempAttack){
-        if (count >= atk.levelCost)
+        if (id === atk.id && count >= atk.levelCost)
         {
             count = count-atk.levelCost
-            // let currentLevelCost = atk.levelCost + atk.levelCost * 0.3
-            // setAttack(currentLevelCost)
-            console.log("leveled up")
-            
+            atk.levelCost = Math.floor(atk.levelCost + atk.levelCost * 0.3)
+            atk.value = Math.floor(atk.value + atk.value * .5)
+            attackRender("attack")
+            setPowerLevel(id)
+            console.log(`"leveled up attack" ${atk.id}`)
+             
         }
     }
     
     for (const def of tempDefense){
-        if (count >= def.levelCost)
+        if (id === def.id && count >= def.levelCost)
         {
-            count = count-def.levelCost  
+            count = count-def.levelCost
+            def.levelCost = Math.floor(def.levelCost + def.levelCost * 0.3)
+            def.value = Math.floor(def.value + def.value * .5)
+            defenseRender("defense")
+            setPowerLevel(id)
+            console.log(`"leveled up defense" ${def.id}`)  
         }
        
     }
     
     for (const utl of tempUtility){
-        if (count >= utl.levelCost)
+        if (id === utl.id && count >= utl.levelCost)
         {
             count = count-utl.levelCost
+            utl.levelCost = Math.floor(utl.levelCost + utl.levelCost * 0.3)
+            utl.value = Math.floor(utl.value + utl.value * .5)
+            utilityRender("utility")
+            setPowerLevel(id)
+            console.log(`"leveled up utility" ${utl.id}`)
         }
        
     }  
