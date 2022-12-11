@@ -17,8 +17,9 @@ export const upgradeRender = (target) => {
             <div class="wrap-skill" id="container-upgrade">\n`
             
             for (const defense of defenseInfo){
-                html += ` <div class="upgrade-skill">${defense.name}:
+                html += ` <div class="upgrade-skill" id="upgrade--${defense.id}">${defense.name}:
             ${defense.value}
+            $ ${defense.levelCost}
             </div>\n`
             }
 
@@ -33,8 +34,9 @@ export const upgradeRender = (target) => {
             <div class="wrap-skill" id="container-upgrade">\n`
             
             for (const utility of utilityInfo){
-                html += ` <div class="upgrade-skill">${utility.name}:
+                html += ` <div class="upgrade-skill" id="upgrade--${utility.id}">${utility.name}:
             ${utility.value}
+            $ ${utility.levelCost}
             </div>\n`
             }
             
@@ -49,8 +51,9 @@ export const upgradeRender = (target) => {
                 <div class="wrap-skill" id="container-upgrade">\n`
 
                 for (const attack of attackInfo){
-                html += ` <div class="upgrade-skill">${attack.name}:
+                html += ` <div class="upgrade-skill" id="upgrade--${attack.id}">${attack.name}:
                 ${attack.value}
+                $ ${attack.levelCost}
                 </div>\n`
                 }
 
